@@ -1,7 +1,7 @@
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import PhotoGallery from "@/components/PhotoGallery"; // Import the new PhotoGallery component
+import PhotoGallery from "@/components/PhotoGallery";
 
 const Index = () => {
   return (
@@ -18,9 +18,17 @@ const Index = () => {
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-6">
             Start building your amazing project here!
           </p>
-          <Button asChild className="mt-4">
-            <Link to="/employees">Go to Employee Management</Link>
-          </Button>
+          <div className="flex flex-col space-y-4 mt-4">
+            <Button asChild>
+              <Link to="/employees">Go to Employee Management</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/login">Login</Link>
+            </Button>
+            <Button asChild variant="secondary">
+              <Link to="/signup">Sign Up</Link>
+            </Button>
+          </div>
         </div>
       </div>
       <MadeWithDyad />
